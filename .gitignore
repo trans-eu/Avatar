@@ -1,0 +1,13 @@
+.DS_Store
+.vscode/
+.idea/
+*.sprite.png
+*.sprite.scss
+coverage/
+dist_storybook/
+dist/
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+.cache/
