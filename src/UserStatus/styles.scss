@@ -1,0 +1,35 @@
+@use 'sass:math';
+
+@import '../variables.scss';
+
+@each $size,
+$statusSize in $statusSizes {
+    $fontSize: math.div($statusSize, $defaultStatusSize) * 1em;
+    $statusBorderWidth: math.div($statusBorder, 2);
+
+    .#{$size}Status {
+        font-size: $fontSize;
+        position: absolute;
+        bottom: $statusBorderWidth;
+        right: $statusBorderWidth;
+    }
+}
+
+.status {
+    width: $defaultStatusSize;
+    height: $defaultStatusSize;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+@each $status,
+$colors in $statusColors {
+    $background: nth($colors, 1);
+    $border: nth($colors, -1);
+
+    .#{$status} {
+        composes: status;
+        background: $background;
+        border: 1px solid $border;
+    }
+}

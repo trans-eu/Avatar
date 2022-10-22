@@ -1,0 +1,25 @@
+// Colors palette.
+$colorsPalette: (
+    #8e5da3,
+    #0456c6,
+    #497db6,
+    #30a7be,
+    #776209,
+    #73795f,
+    #c6a15f,
+    #b99c9a,
+);
+
+$defaultColor: #e5eaee;
+
+// Create class for each color in palette.
+@each $color, $i in $colorsPalette {
+    .colorClass#{index($colorsPalette, $color)} { 
+        background-color: $color;
+    }
+}
+
+// Default color class.
+.colorClass0 {
+    background-color: $defaultColor;
+}

@@ -1,0 +1,24 @@
+$statusBorder: 2px;
+$defaultStatusSize: 10px;
+$defaultFontSize: 12px;
+
+$statusSizes: (
+    small: 8px,
+    medium: $defaultStatusSize,
+    big: $defaultStatusSize,
+    huge: $defaultStatusSize
+);
+
+$statusColors: (
+    available: #31b35e,
+    unavailable: #abbad2,
+    invisible: (#fff #abbad2),
+    away: #ebaa10,
+);
+
+$avatarSizes: (
+    small: 26px,
+    medium: 34px,
+    big: 40px,
+    huge: 60px
+);
