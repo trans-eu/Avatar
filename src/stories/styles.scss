@@ -1,0 +1,32 @@
+$padding: 10px;
+$border: 1px;
+
+.resize {
+    resize: horizontal;
+    overflow: hidden;
+    padding: $padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border: $border solid rgba(0,0,0,0.1);
+        pointer-events: none;
+        top: $padding - $border;
+        right: $padding - $border;
+        left: $padding - $border;
+        bottom: $padding - $border;
+        opacity: 0;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
