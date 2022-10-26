@@ -10,7 +10,7 @@ import classNames from 'classnames';
 import useInitials from './hooks/useInitials/useInitials';
 import styles from './styles.scss';
 import UserStatus from '../UserStatus/UserStatus';
-console.log(styles)
+
 const noop = () => {};
 
 const Avatar = ({
@@ -52,6 +52,7 @@ const Avatar = ({
                 responsive && styles.responsive,
                 status && styles.hasStatus
             )}
+            data-testid="avatar"
         >
             <div className={styles.positioner}>
                 <div
@@ -63,6 +64,7 @@ const Avatar = ({
                 >
                     <span
                         className={isImageHidden ? styles.initials : styles.hiddenInitials}
+                        data-testid="initials"
                         title={title}
                     >
                         {initials}
