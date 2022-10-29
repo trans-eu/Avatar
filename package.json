@@ -2,7 +2,7 @@
   "name": "@trans.eu/avatar",
   "version": "1.0.0",
   "description": "Avatar component written in React",
-  "main": "/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "watch": "webpack --watch",
@@ -19,11 +19,19 @@
     "name": "Trans.eu",
     "url": "https://github.com/trans-eu"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trans-eu/Avatar/issues"
   },
   "homepage": "https://github.com/trans-eu/Avatar#readme",
+  "keywords": [
+    "avatar",
+    "status",
+    "user"
+  ],
   "dependencies": {
     "classnames": "^2.3.2",
     "prop-types": "^15.8.1",
