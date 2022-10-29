@@ -5,6 +5,7 @@ import styles from './styles.scss';
 const UserStatus = ({ size, status }) => (
     <div className={styles[`${size}Status`]}>
         <div
+            data-testid="status"
             className={styles[status]}
         />
     </div>
